@@ -19,9 +19,14 @@ public class BasketController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Apple")
+        if (other.gameObject.tag == "Apple")
         {
             director.GetComponent<GameDirector>().GetApple();
+            aud.PlayOneShot(appleSE);
+        }
+        else if (other.gameObject.tag == "Gapple")
+        {
+            director.GetComponent<GameDirector>().GetGapple();
             aud.PlayOneShot(appleSE);
         }
         else
@@ -44,7 +49,6 @@ public class BasketController : MonoBehaviour
                 float x = Mathf.RoundToInt(hit.point.x);
                 float z = Mathf.RoundToInt(hit.point.z);
                 transform.position = new Vector3(x, 0, z);
-
             }
         }
 	}

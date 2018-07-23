@@ -212,6 +212,8 @@ MonoBehaviour:
   applePrefab: {fileID: 1619958798231984, guid: 45612a64358633b4fb853d3f295067a1,
     type: 2}
   bombPrefab: {fileID: 1780007027560938, guid: 2e6787e7854ea2643acb3c1d5e21facc, type: 2}
+  gapplePrefab: {fileID: 1619958798231984, guid: 2066548820bf4c942954a05c8d5218e6,
+    type: 2}
 --- !u!4 &298233675
 Transform:
   m_ObjectHideFlags: 0

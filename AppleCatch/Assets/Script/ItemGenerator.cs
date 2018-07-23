@@ -7,6 +7,7 @@ public class ItemGenerator : MonoBehaviour
 
     public GameObject applePrefab;
     public GameObject bombPrefab;
+    public GameObject gapplePrefab;
     float 
         span=1.0f,
         delta=0;
@@ -41,10 +42,15 @@ public class ItemGenerator : MonoBehaviour
             {
                 item = Instantiate(bombPrefab) as GameObject;
             }
+            else if(dice>=10)
+            {
+                item = Instantiate(gapplePrefab) as GameObject;
+            }
             else
             {
                 item = Instantiate(applePrefab) as GameObject;
             }
+
             float x = Random.Range(-1, 2);
             float z = Random.Range(-1, 2);
             item.transform.position = new Vector3(x, 4, z);
